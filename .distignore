@@ -1,0 +1,15 @@
+.*
+.*/
+*.md
+*.zip
+*.map
+*.lock
+bin/
+node_modules/
+composer.*
+changelog.txt
+Gruntfile.js
+package.json
+package-lock.json
+renovate.json
+phpcs.xml.dist

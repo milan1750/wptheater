@@ -1,0 +1,62 @@
+{
+	"name": "wpforms-repeater",
+	"version": "1.2.0",
+	"private": true,
+	"description": "Repeater for WPForms provides users with flexibility of repeating any number of fields in the form from the frontend.",
+	"author": "WPCanny",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"WordPress",
+		"wpforms-repeater"
+	],
+	"homepage": "https://github.com/WPCanny/wpforms-repeater#readme",
+	"repository": "git+https://github.com/WPCanny/wpforms-repeater.git",
+	"bugs": {
+		"url": "https://github.com/WPCanny/wpforms-repeater/issues"
+	},
+	"engines": {
+		"node": ">=10.0.0",
+		"npm": ">=6.9.0"
+	},
+	"devDependencies": {
+		"@lodder/grunt-postcss": "3.0.1",
+		"@wordpress/eslint-plugin": "9.1.1",
+		"@wordpress/prettier-config": "1.1.0",
+		"@wordpress/stylelint-config": "19.1.0",
+		"autoprefixer": "10.3.4",
+		"cssnano": "5.0.8",
+		"eslint-plugin-prettier": "3.3.0",
+		"grunt": "1.4.1",
+		"grunt-contrib-uglify": "5.0.1",
+		"grunt-contrib-watch": "1.1.0",
+		"grunt-eslint": "23.0.0",
+		"grunt-newer": "1.3.0",
+		"grunt-sass": "3.1.0",
+		"grunt-stylelint": "0.16.0",
+		"husky": "7.0.2",
+		"lint-staged": "11.1.2",
+		"node-sass": "6.0.1",
+		"postcss": "8.3.6",
+		"prettier": "npm:wp-prettier@2.0.5",
+		"stylelint": "13.13.1"
+	},
+	"scripts": {
+		"prepare": "husky install",
+		"build": "grunt && npm run makepot",
+		"makepot": "composer run-script makepot"
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix",
+			"git add"
+		],
+		"*.scss": [
+			"stylelint --syntax=scss --fix",
+			"git add"
+		],
+		"*.php": [
+			"php -d display_errors=1 -l",
+			"composer run-script phpcs"
+		]
+	}
+}

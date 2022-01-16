@@ -1,0 +1,18 @@
+{
+	"extends": [
+		"config:base"
+	],
+	"lockFileMaintenance": {
+		"enabled": true
+	},
+	"packageRules": [
+		{
+			"matchDepTypes": [
+				"devDependencies"
+			],
+			"extends": [
+				"schedule:monthly"
+			]
+		}
+	]
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards for WPForms Repeater Plugin">
+	<description>Sniffs for WordPress plugins, with minor modifications for WPForms Repeater</description>
+
+	<!-- Only scan PHP files. -->
+	<arg name="extensions" value="php" />
+
+	<!-- Strip the filepaths down to the relevant bit. -->
+	<arg name="basepath" value="./" />
+
+	<!-- Check up to 8 files simultaneously. -->
+	<arg name="parallel" value="8" />
+
+	<!-- Show sniff codes in all reports. -->
+	<arg value="ps" />
+
+	<file>.</file>
+
+	<!-- Directories and third party library exclusions. -->
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+
+	<!-- Configs -->
+	<config name="testVersion" value="5.6-" />
+	<config name="text_domain" value="wpforms-repeater" />
+	<config name="minimum_supported_wp_version" value="5.4" />
+
+	<!-- PHPCompatibility -->
+	<rule ref="PHPCompatibilityWP" />
+
+	<!-- VariableAnalysis -->
+	<rule ref="VariableAnalysis.CodeAnalysis.VariableAnalysis">
+		<properties>
+			<property name="validUnusedVariableNames" value="deprecated form_data" />
+		</properties>
+	</rule>
+
+	<!-- Include PSR12 rules -->
+	<rule ref="PSR12.Traits.UseDeclaration" />
+	<rule ref="PSR12.Files.FileHeader.SpacingAfterBlock">
+		<include-pattern>src/</include-pattern>
+	</rule>
+
+	<!-- Include Squiz rules -->
+	<rule ref="Squiz.WhiteSpace.MemberVarSpacing" />
+	<rule ref="Squiz.WhiteSpace.FunctionSpacing">
+		<properties>
+			<property name="spacing" value="1" />
+			<property name="spacingAfterLast" value="0" />
+		</properties>
+	</rule>
+
+	<!-- Include Generic rules -->
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
+	<!-- Include WordPress rules -->
+	<rule ref="WordPress">
+		<!-- Things we ignore -->
+		<exclude name="Squiz.Commenting.FileComment.Missing" />
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+		<exclude name="Generic.Commenting.DocComment.MissingShort" />
+		<!-- Database specific rules. -->
+		<exclude name="WordPress.DB.DirectDatabaseQuery.NoCaching" />
+		<exclude name="WordPress.DB.DirectDatabaseQuery.DirectQuery" />
+		<exclude name="WordPress.DB.DirectDatabaseQuery.SchemaChange" />
+		<!-- Exclude incorrectly named files that won't be renamed. -->
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
+	</rule>
+</ruleset>

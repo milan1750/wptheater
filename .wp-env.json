@@ -1,0 +1,9 @@
+{
+	"core": null,
+	"plugins": [ "." ],
+	"config": {
+		"WPFORMS_DEBUG": true,
+		"WP_DEBUG_LOG": true,
+		"WP_DEBUG_DISPLAY": true
+	}
+}

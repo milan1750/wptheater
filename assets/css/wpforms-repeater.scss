@@ -1,0 +1,33 @@
+/**
+ * wpforms-repeater.scss
+ * Styles applied to WPForms Repeater field.
+ */
+div.wpforms-container-full {
+	.wpforms-form,
+	.wpforms-entry-preview {
+		.wpforms-field-repeater {
+			button.wpforms-repeater-button {
+				display: none;
+				color: #333;
+				font-size: 1em;
+				font-weight: 400;
+				padding: 5px 15px;
+				border: 1px solid #ddd;
+				background-color: #eee;
+
+				&.wpforms-repeater-add {
+					margin-right: 5px;
+				}
+
+				&:not(.wpforms-hidden) {
+					display: inline-block !important;
+				}
+			}
+		}
+
+		.wpforms-repeater-sepearator,
+		.wpforms-entry-repeater-field-value {
+			display: block;
+		}
+	}
+}
