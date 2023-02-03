@@ -1,0 +1,18 @@
+// $data_service              = DataService::Configure(
+		// [
+		// 'auth_mode'    => 'oauth2',
+		// 'ClientID'     => $this->client_id,
+		// 'ClientSecret' => $this->client_secret,
+		// 'RedirectURI'  => 'https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl',
+		// 'scope'        => 'com.intuit.quickbooks.accounting',
+		// 'baseUrl'      => 'development',
+		// ]
+		// );
+
+		// $oauth_2_login_helper = $data_service->getOAuth2LoginHelper();
+		// $auth_url             = $oauth_2_login_helper->getAuthorizationCodeURL();
+		// $authorization_code   = 'AB11673606603lRnvO9wuEQSgiNwqPuPd3KH1UYg0IEvgodteQ';
+		// $realm_id             = '4620816365265729100';
+		// $access_token         = $oauth_2_login_helper->exchangeAuthorizationCodeForToken( $authorization_code, $realm_id );
+		// $access_token_value   = $access_token->getAccessToken();
+		// $refresh_token_valuie = $access_token->getRefreshToken();

@@ -1,27 +1,4 @@
 == Changelog ==
 
-= 1.2.0 - 14-12-2021 =
-* Fix - Classic select default value issue.
-* Fix - Modern select value missing in entries.
-* Fix - Modern Select and multiple choice issues.
-* Fix - Conditional logic in inner repeated fields.
-* Fix - Conditional logic checked before processing.
-
-= 1.1.0 - 27-11-2021 =
-* Feature - Conditional logic is supported.
-* Feature - Payment field types are supported.
-* Fix - Smart Phone field not working.
-* Fix - Date / Time field not working.
-* Fix - Dropdown field modern style not working.
-* Fix - Add support for Field Description option.
-* Fix - Hide the repeater field from the entry preview.
-* Fix - Entry preview is missing after form submission.
-
-= 1.0.1 - 21-09-2021 =
-* Fix - Corrected the documentation link on the plugins page.
-* Fix - Remove button action on the first load should be hidden.
-* Fix - Button having bolder font-weight on some popular themes.
-* Dev - Development and build-related glitches.
-
 = 1.0.0 - 06-09-2021 =
 * Initial release.

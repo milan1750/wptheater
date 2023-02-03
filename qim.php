@@ -1,30 +1,30 @@
 <?php
 /**
- * Plugin Name: WPForms Repeater
- * Plugin URI: https://github.com/WPCanny/wpforms-repeater
- * Description: Repeater for WPForms provides users with flexibility of repeating any number of fields in the form from the frontend.
- * Version: 1.2.0
- * Author: WPCanny
- * Author URI: https://wpcanny.com
- * Text Domain: wpforms-repeater
+ * Plugin Name: QuickBooks Invoice Manager
+ * Plugin URI: https://github.com/milan1750/qim
+ * Description:
+ * Version: 1.0.0
+ * Author: Milan Malla
+ * Author URI: https://github.com/milan1750
+ * Text Domain: qim
  * Domain Path: /languages/
  * Requires at least: 5.4
  * Requires PHP: 5.6.20
  *
- * @package WPForms\Repeater
+ * @package QuickBooks\InvoiceManager
  */
 
 // Exit if access directly.
 defined( 'ABSPATH' ) || exit;
 
-// WPForms Repeater version.
-if ( ! defined( 'WPFORMS_REPEATER_VERSION' ) ) {
-	define( 'WPFORMS_REPEATER_VERSION', '1.2.0' );
+// QuickBooks Invoice Manager version.
+if ( ! defined( 'QIM_VERSION' ) ) {
+	define( 'QIM_VERSION', '1.2.0' );
 }
 
-// WPForms Repeater root file.
-if ( ! defined( 'WPFORMS_REPEATER_PLUGIN_FILE' ) ) {
-	define( 'WPFORMS_REPEATER_PLUGIN_FILE', __FILE__ );
+// QuickBooks Invoice Manager root file.
+if ( ! defined( 'QIM_PLUGIN_FILE' ) ) {
+	define( 'QIM_PLUGIN_FILE', __FILE__ );
 }
 
 /**
@@ -41,7 +41,7 @@ if ( is_readable( $autoloader ) ) {
 		error_log( // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 			sprintf(
 			/* translators: 1: composer command. 2: plugin directory */
-				esc_html__( 'Your installation of the WPForms Repeater plugin is incomplete. Please run %1$s within the %2$s directory.', 'wpforms-repeater' ),
+				esc_html__( 'Your installation of the QuickBooks Invoice Manager plugin is incomplete. Please run %1$s within the %2$s directory.', 'qim' ),
 				'`composer install`',
 				'`' . esc_html( str_replace( ABSPATH, '', __DIR__ ) ) . '`'
 			)
@@ -60,7 +60,7 @@ if ( is_readable( $autoloader ) ) {
 				'<div class="notice notice-error"><p>%s</p></div>',
 				sprintf(
 					/* translators: 1: composer command. 2: plugin directory */
-					esc_html__( 'Your installation of the WPForms Repeater plugin is incomplete. Please run %1$s within the %2$s directory.', 'wpforms-repeater' ),
+					esc_html__( 'Your installation of the QuickBooks Invoice Manager plugin is incomplete. Please run %1$s within the %2$s directory.', 'qim' ),
 					'<code>composer install</code>',
 					'<code>' . esc_html( str_replace( ABSPATH, '', __DIR__ ) ) . '</code>'
 				)
@@ -70,5 +70,8 @@ if ( is_readable( $autoloader ) ) {
 	return;
 }
 
+// Activate the plugin.
+register_activation_hook( __FILE__, [ 'QuickBooks\InvoiceManager\Activate', 'init' ] );
+
 // Initialize the plugin.
-add_action( 'plugins_loaded', [ 'WPForms\Repeater\Plugin', 'instance' ], 0 );
+add_action( 'plugins_loaded', [ 'QuickBooks\InvoiceManager\InvoiceManager', 'instance' ] );

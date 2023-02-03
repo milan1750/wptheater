@@ -1,17 +1,22 @@
 {
-	"name": "wpcanny/wpforms-repeater",
-	"description": "Repeater for WPForms provides users with flexibility of repeating any number of fields in the form from the frontend.",
-	"homepage": "https://wpcanny.com",
+	"name": "milanmalla/quickbooks-invoice-manager",
+	"description": "",
+	"homepage": "https://github.com/milan1750",
 	"type": "wordpress-plugin",
 	"license": "GPL-2.0-or-later",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"config": {
-		"process-timeout": 0
+		"process-timeout": 0,
+		"allow-plugins": {
+			"composer/installers": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
 	},
 	"require": {
 		"php": ">=5.6.20",
-		"composer/installers": "2.0.0"
+		"composer/installers": "2.0.0",
+		"quickbooks/v3-php-sdk": ">=4.0.1"
 	},
 	"require-dev": {
 		"wp-cli/i18n-command": "2.2.9",
@@ -22,7 +27,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"WPForms\\Repeater\\": "src/"
+			"QuickBooks\\InvoiceManager\\": "src/"
 		}
 	},
 	"scripts": {
@@ -36,15 +41,15 @@
 			"@makepot:audit --skip-audit"
 		],
 		"makepot:audit": [
-			"wp --allow-root i18n make-pot . --slug=wpforms-repeater"
+			"wp --allow-root i18n make-pot . --slug=quickbooks-invoice-manager"
 		]
 	},
 	"extra": {
 		"scripts-description": {
 			"phpcs": "Analyze code against the WordPress coding standard with PHP_CodeSniffer",
 			"phpcbf": "Fix coding standards warnings/errors automattically with PHP Code Beautifier",
-			"makepot": "Generate langauges/wpforms-repeater.pot file",
-			"makepot:audit": "Generate langauges/wpforms-repeater.pot file and run audit"
+			"makepot": "Generate langauges/quickbooks-invoice-manager.pot file",
+			"makepot:audit": "Generate langauges/quickbooks-invoice-manager.pot file and run audit"
 		}
 	}
 }
