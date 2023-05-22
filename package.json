@@ -1,18 +1,22 @@
 {
-	"name": "qim",
-	"version": "1.2.0",
+	"name": "wptheater",
+	"version": "1.0.0",
 	"private": true,
-	"description": "",
+	"description": "WordPress plugin for theater management.",
 	"author": "Milan Malla",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
-		"WordPress",
-		"qim"
+		"movies",
+		"cinemas",
+		"plugin",
+		"theater-manager",
+		"theater-ticket-manager",
+		"movie-ticket-manager"
 	],
-	"homepage": "https://github.com/milan1750/qim#readme",
-	"repository": "git+https://github.com/milan1750/qim.git",
+	"homepage": "https://github.com/milan1750/wptheater#readme",
+	"repository": "git+https://github.com/milan1750/wptheater",
 	"bugs": {
-		"url": "https://github.com/milan1750/qim/issues"
+		"url": "https://github.com/milan1750/wptheater/issues"
 	},
 	"engines": {
 		"node": ">=10.0.0",

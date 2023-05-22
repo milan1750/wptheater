@@ -1,0 +1,63 @@
+{
+	"folders": [
+		{
+			"name": "wptheatre",
+			"path": "/home/dell/Sites/wptheatre/wp-content/plugins/wptheatre"
+		}
+	],
+	"transient": false,
+	"settings": {
+		"phpsab.composerJsonPath": "${workspaceFolder:wptheatre}\\composer.json",
+		"terminal.integrated.cwd": "${workspaceFolder:wptheatre}",
+		"files.exclude": {
+			"**/wordpress/src": true,
+			"**/wp-admin/images": true,
+			"**/wp-admin/maint": true,
+			"**/wp-admin/user": true,
+			"**/wp-content/themes": true,
+			"**/wp-content/upgrade": true,
+			"**/wp-content/uploads": true,
+			"**/wp-content/languages": true,
+			"**/wp-content/mu-plugins": true,
+			"**/wp-includes/certificates": true,
+			"**/wp-includes/fonts": true,
+			"**/wp-includes/ID3": true,
+			"**/wp-includes/images": true,
+			"**/wp-includes/IXR": true,
+			"**/wp-includes/pomo": true,
+			"**/wp-includes/random_compat": true,
+			"**/wp-includes/theme-compat": true,
+			"**/wp-includes/SimplePie": true,
+			"**/local-phpinfo.php": true,
+			"**/wp-activate.php": true,
+			"**/wp-blog-header.php": true,
+			"**/wp-comments-post.php": true,
+			"**/wp-config-sample.php": true,
+			"**/wp-tests-config-sample.php": true,
+			"**/wp-cron.php": true,
+			"**/wp-links-opml.php": true,
+			"**/wp-load.php": true,
+			"**/wp-login.php": true,
+			"**/wp-mail.php": true,
+			"**/wp-settings.php": true,
+			"**/wp-signup.php": true,
+			"**/wp-trackback.php": true,
+			"**/xmlrpc.php": true,
+			// WP Plugins Ignorance.
+			"**/members": true,
+			"**/wpforms": false,
+			"**/wpforms-lite": true,
+			"**/rtl-tester": true,
+			"**/query-monitor": true,
+			"**/user-switching": true,
+			"**/loco-translate": true,
+			"**/disable-json-api": true,
+			"**/advanced-wp-reset": true,
+			"**/display-environment-type": true,
+		},
+		"intelephense.diagnostics.undefinedConstants": false,
+		"[php]": {
+			"editor.formatOnSave": true
+		}
+	}
+}

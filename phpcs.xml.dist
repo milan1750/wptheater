@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="WordPress Coding Standards for QuickBooks Invoice Manager Plugin">
-	<description>Sniffs for WordPress plugins, with minor modifications for QuickBooks Invoice Manager</description>
+<ruleset name="WordPress Coding Standards for WPTheater Plugin">
+	<description>Sniffs for WordPress plugins, with minor modifications for WPTheater</description>
 
 	<!-- Only scan PHP files. -->
 	<arg name="extensions" value="php" />
@@ -22,7 +22,7 @@
 
 	<!-- Configs -->
 	<config name="testVersion" value="5.6-" />
-	<config name="text_domain" value="qim" />
+	<config name="text_domain" value="wptheater" />
 	<config name="minimum_supported_wp_version" value="5.4" />
 
 	<!-- PHPCompatibility -->

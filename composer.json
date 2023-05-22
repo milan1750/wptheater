@@ -1,7 +1,8 @@
 {
-	"name": "milanmalla/quickbooks-invoice-manager",
-	"description": "",
-	"homepage": "https://github.com/milan1750",
+	"name": "milan1750/wptheater",
+	"version": "1.0.0",
+	"description": "WordPress plugin for theater management.",
+	"homepage": "https://github.com/milan1750/wptheater",
 	"type": "wordpress-plugin",
 	"license": "GPL-2.0-or-later",
 	"minimum-stability": "dev",
@@ -15,8 +16,7 @@
 	},
 	"require": {
 		"php": ">=5.6.20",
-		"composer/installers": "2.0.0",
-		"quickbooks/v3-php-sdk": ">=4.0.1"
+		"composer/installers": "2.0.0"
 	},
 	"require-dev": {
 		"wp-cli/i18n-command": "2.2.9",
@@ -27,7 +27,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"QuickBooks\\InvoiceManager\\": "src/"
+			"WPTheater\\WPTheater\\": "includes/"
 		}
 	},
 	"scripts": {
@@ -41,15 +41,15 @@
 			"@makepot:audit --skip-audit"
 		],
 		"makepot:audit": [
-			"wp --allow-root i18n make-pot . --slug=quickbooks-invoice-manager"
+			"wp --allow-root i18n make-pot . --slug=wptheater"
 		]
 	},
 	"extra": {
 		"scripts-description": {
 			"phpcs": "Analyze code against the WordPress coding standard with PHP_CodeSniffer",
 			"phpcbf": "Fix coding standards warnings/errors automattically with PHP Code Beautifier",
-			"makepot": "Generate langauges/quickbooks-invoice-manager.pot file",
-			"makepot:audit": "Generate langauges/quickbooks-invoice-manager.pot file and run audit"
+			"makepot": "Generate langauges/wptheater.pot file",
+			"makepot:audit": "Generate langauges/wptheater.pot file and run audit"
 		}
 	}
 }

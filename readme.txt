@@ -1,6 +1,6 @@
-=== QuickBooks Invoice Manager ===
+=== WPTheater ===
 Contributors: Milan Malla
-Tags: quickbooks, plugin, quickbooks-invoice-manaer
+Tags: movies, cinemas, plugin, theater-manager, theater-ticket-manager, movie-ticket-manager
 Requires at least: 5.4
 Tested up to: 5.8
 Requires PHP: 5.6.20

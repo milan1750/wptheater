@@ -7,7 +7,7 @@
 			"request": "launch",
 			"port": 9003,
 			"pathMappings": {
-				"/var/www/html/wp-content/plugins/quickbooks-invoice-manager": "${workspaceFolder}"
+				"/var/www/html/wp-content/plugins/wptheater": "${workspaceFolder}"
 			}
 		}
 	]
